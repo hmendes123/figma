@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5EAFD">
+
+    <!-- Frame: Examples/Detailed view-Mobile (412x900) -->
+
+    <!-- INSTANCE: Status bar -->
+    <LinearLayout
+        android:id="@+id/status_bar"
+        android:orientation="horizontal"
+        android:layout_width="412dp"
+        android:layout_height="52dp"
+        android:paddingLeft="24dp"
+        android:paddingTop="10dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="10dp">
+
+        <!-- TEXT: Time -->
+        <TextView
+            android:id="@+id/time"
+            android:text="9:30"
+            android:textSize="14sp"
+            android:textColor="#FF1D1B20"
+            android:gravity="start"
+        android:layout_width="29dp"
+        android:layout_height="20dp" />
+
+        <!-- GROUP: right icons -->
+        <View
+            android:id="@+id/right_icons"
+        android:layout_width="46dp"
+        android:layout_height="17dp" />
+
+        <!-- VECTOR: Camera Cutout -->
+        <ImageView
+            android:id="@+id/camera_cutout"
+            android:src="@drawable/ic_camera_cutout"
+            android:scaleType="fitXY"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+    </LinearLayout>
+
+    <!-- INSTANCE: Gesture bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gesture_bar"
+        android:layout_width="412dp"
+        android:layout_height="24dp"
+        android:background="#FFF3EDF7">
+
+        <!-- RECTANGLE: handle -->
+        <LinearLayout
+            android:id="@+id/handle"
+        android:layout_width="108dp"
+        android:layout_height="4dp"
+            android:background="@drawable/bg_rounded" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- FRAME: condition-illustration -->
+    <LinearLayout
+        android:id="@+id/condition_illustration"
+        android:orientation="horizontal"
+        android:layout_width="412dp"
+        android:layout_height="80dp">
+
+        <!-- FRAME: cloud-sun -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cloud_sun"
+        android:layout_width="72dp"
+        android:layout_height="72dp">
+
+            <!-- VECTOR: Vector -->
+            <ImageView
+                android:id="@+id/vector"
+                android:src="@drawable/ic_vector"
+                android:scaleType="fitXY"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <!-- FRAME: hero-weather-header -->
+    <LinearLayout
+        android:id="@+id/hero_weather_header"
+        android:orientation="vertical"
+        android:layout_width="412dp"
+        android:layout_height="235dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="12dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="20dp">
+
+        <!-- TEXT: location-city -->
+        <TextView
+            android:id="@+id/location_city"
+            android:text="Olimpía"
+            android:textSize="34sp"
+            android:textColor="#FF7271BA"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:fontFamily="Outfit"
+        android:layout_width="412dp"
+        android:layout_height="43dp" />
+
+        <!-- TEXT: current-temp -->
+        <TextView
+            android:id="@+id/current_temp"
+            android:text="30°"
+            android:textSize="88sp"
+            android:textColor="#FF7271BA"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:fontFamily="Outfit"
+        android:layout_width="412dp"
+        android:layout_height="111dp" />
+
+        <!-- FRAME: Frame -->
+        <LinearLayout
+            android:id="@+id/frame"
+            android:orientation="horizontal"
+        android:layout_width="208dp"
+        android:layout_height="22dp"
+            android:paddingLeft="0dp"
+            android:paddingTop="4dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp">
+
+            <!-- TEXT: Sensação de 68° -->
+            <TextView
+                android:id="@+id/sensa__o_de_68_"
+                android:text="Sensação de 68°"
+                android:textSize="14sp"
+                android:gravity="start"
+        android:layout_width="111dp"
+        android:layout_height="18dp" />
+
+            <!-- LINE: Line -->
+            <View
+                android:id="@+id/line"
+        android:layout_width="10dp"
+        android:layout_height="0dp" />
+
+            <!-- TEXT: H: 74° L: 61° -->
+            <TextView
+                android:id="@+id/h__74__l__61_"
+                android:text="H: 74°  L: 61°"
+                android:textSize="14sp"
+                android:textColor="#FF6759FD"
+                android:gravity="start"
+                android:fontFamily="Geist"
+        android:layout_width="81dp"
+        android:layout_height="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- COMPONENT: hourly-forecast-card -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hourly_forecast_card"
+        android:layout_width="380dp"
+        android:layout_height="171dp"
+        android:background="#FFFFFFFF">
+
+        <!-- FRAME: hourly-forecast-card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hourly_forecast_card"
+        android:layout_width="362dp"
+        android:layout_height="171dp"
+            android:background="@drawable/bg_rounded"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="12dp">
+
+            <!-- TEXT: card-header -->
+            <TextView
+                android:id="@+id/card_header"
+                android:text="temperatura durante o dia"
+                android:textSize="13sp"
+                android:textColor="#FFB8BDD9"
+                android:gravity="start"
+                android:textStyle="bold"
+                android:fontFamily="Manrope"
+        android:layout_width="338dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- FRAME: hourly-scroll-track -->
+            <LinearLayout
+                android:id="@+id/hourly_scroll_track"
+                android:orientation="horizontal"
+        android:layout_width="338dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+                <!-- FRAME: hourly-item -->
+                <LinearLayout
+                    android:id="@+id/hourly_item"
+                    android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="106dp"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- TEXT: time-label -->
+                    <TextView
+                        android:id="@+id/time_label"
+                        android:text="Now"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Manrope"
+        android:layout_width="48dp"
+        android:layout_height="18dp" />
+
+                    <!-- FRAME: cloud-sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cloud_sun"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- TEXT: temp-value -->
+                    <TextView
+                        android:id="@+id/temp_value"
+                        android:text="30°"
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Outfit"
+        android:layout_width="48dp"
+        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <!-- FRAME: hourly-item -->
+                <LinearLayout
+                    android:id="@+id/hourly_item"
+                    android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="106dp"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- TEXT: time-label -->
+                    <TextView
+                        android:id="@+id/time_label"
+                        android:text="10 AM"
+                        android:textSize="13sp"
+                        android:textColor="#FFE2E5F5"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="Manrope"
+        android:layout_width="48dp"
+        android:layout_height="18dp" />
+
+                    <!-- FRAME: cloud-sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cloud_sun"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- TEXT: temp-value -->
+                    <TextView
+                        android:id="@+id/temp_value"
+                        android:text="30°"
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Outfit"
+        android:layout_width="48dp"
+        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <!-- FRAME: hourly-item -->
+                <LinearLayout
+                    android:id="@+id/hourly_item"
+                    android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="106dp"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- TEXT: time-label -->
+                    <TextView
+                        android:id="@+id/time_label"
+                        android:text="11 AM"
+                        android:textSize="13sp"
+                        android:textColor="#FFE2E5F5"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="Manrope"
+        android:layout_width="48dp"
+        android:layout_height="18dp" />
+
+                    <!-- FRAME: cloud-sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cloud_sun"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- TEXT: temp-value -->
+                    <TextView
+                        android:id="@+id/temp_value"
+                        android:text="32°"
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Outfit"
+        android:layout_width="48dp"
+        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <!-- FRAME: hourly-item -->
+                <LinearLayout
+                    android:id="@+id/hourly_item"
+                    android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="106dp"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- TEXT: time-label -->
+                    <TextView
+                        android:id="@+id/time_label"
+                        android:text="12 PM"
+                        android:textSize="13sp"
+                        android:textColor="#FFE2E5F5"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="Manrope"
+        android:layout_width="48dp"
+        android:layout_height="18dp" />
+
+                    <!-- FRAME: sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sun"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- TEXT: temp-value -->
+                    <TextView
+                        android:id="@+id/temp_value"
+                        android:text="33°"
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Outfit"
+        android:layout_width="48dp"
+        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <!-- FRAME: hourly-item -->
+                <LinearLayout
+                    android:id="@+id/hourly_item"
+                    android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="106dp"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- TEXT: time-label -->
+                    <TextView
+                        android:id="@+id/time_label"
+                        android:text="1 PM"
+                        android:textSize="13sp"
+                        android:textColor="#FFE2E5F5"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="Manrope"
+        android:layout_width="48dp"
+        android:layout_height="18dp" />
+
+                    <!-- FRAME: sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sun"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- TEXT: temp-value -->
+                    <TextView
+                        android:id="@+id/temp_value"
+                        android:text="32°"
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Outfit"
+        android:layout_width="48dp"
+        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <!-- FRAME: hourly-item -->
+                <LinearLayout
+                    android:id="@+id/hourly_item"
+                    android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="106dp"
+                    android:background="@drawable/bg_rounded"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- TEXT: time-label -->
+                    <TextView
+                        android:id="@+id/time_label"
+                        android:text="2 PM"
+                        android:textSize="13sp"
+                        android:textColor="#FFE2E5F5"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="Manrope"
+        android:layout_width="48dp"
+        android:layout_height="18dp" />
+
+                    <!-- FRAME: cloud-sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cloud_sun"
+        android:layout_width="24dp"
+        android:layout_height="24dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- TEXT: temp-value -->
+                    <TextView
+                        android:id="@+id/temp_value"
+                        android:text="30°"
+                        android:textSize="16sp"
+                        android:textColor="#FFFFFFFF"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:fontFamily="Outfit"
+        android:layout_width="48dp"
+        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- FRAME: weekly-forecast -->
+    <LinearLayout
+        android:id="@+id/weekly_forecast"
+        android:orientation="vertical"
+        android:layout_width="404dp"
+        android:layout_height="176dp">
+
+        <!-- FRAME: weekly-forecast-card -->
+        <LinearLayout
+            android:id="@+id/weekly_forecast_card"
+            android:orientation="vertical"
+        android:layout_width="404dp"
+        android:layout_height="176dp"
+            android:background="@drawable/bg_rounded"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- FRAME: Frame -->
+            <LinearLayout
+                android:id="@+id/frame"
+                android:orientation="horizontal"
+        android:layout_width="372dp"
+        android:layout_height="18dp">
+
+                <!-- TEXT: Quarta -->
+                <TextView
+                    android:id="@+id/quarta"
+                    android:text="Quarta"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:fontFamily="Geist"
+        android:layout_width="70dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: icon-lightning-bolt -->
+                <LinearLayout
+                    android:id="@+id/icon_lightning_bolt"
+                    android:orientation="vertical"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                    <!-- FRAME: zap -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/zap"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="14dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <!-- TEXT: 30° -->
+                <TextView
+                    android:id="@+id/30_"
+                    android:text="30°"
+                    android:textSize="14sp"
+                    android:textColor="#FF94A3B8"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: Frame -->
+                <LinearLayout
+                    android:id="@+id/frame"
+                    android:orientation="horizontal"
+        android:layout_width="176dp"
+        android:layout_height="4dp"
+                    android:background="@drawable/bg_rounded">
+
+                    <!-- RECTANGLE: Rectangle -->
+                    <LinearLayout
+                        android:id="@+id/rectangle"
+        android:layout_width="30dp"
+        android:layout_height="4dp"
+                        android:background="#FF00F0FF" />
+                </LinearLayout>
+
+                <!-- TEXT: 74° -->
+                <TextView
+                    android:id="@+id/74_"
+                    android:text="74°"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+            </LinearLayout>
+
+            <!-- LINE: Line -->
+            <View
+                android:id="@+id/line"
+        android:layout_width="372dp"
+        android:layout_height="0dp" />
+
+            <!-- FRAME: Frame -->
+            <LinearLayout
+                android:id="@+id/frame"
+                android:orientation="horizontal"
+        android:layout_width="372dp"
+        android:layout_height="18dp">
+
+                <!-- TEXT: Quinta -->
+                <TextView
+                    android:id="@+id/quinta"
+                    android:text="Quinta"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="70dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: icon-heavy-rain -->
+                <LinearLayout
+                    android:id="@+id/icon_heavy_rain"
+                    android:orientation="vertical"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                    <!-- FRAME: cloud-rain -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cloud_rain"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="15dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <!-- TEXT: 58° -->
+                <TextView
+                    android:id="@+id/58_"
+                    android:text="58°"
+                    android:textSize="14sp"
+                    android:textColor="#FF94A3B8"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: Frame -->
+                <LinearLayout
+                    android:id="@+id/frame"
+                    android:orientation="horizontal"
+        android:layout_width="176dp"
+        android:layout_height="4dp"
+                    android:background="@drawable/bg_rounded">
+
+                    <!-- RECTANGLE: Rectangle -->
+                    <LinearLayout
+                        android:id="@+id/rectangle"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+                        android:background="#FF00F0FF" />
+                </LinearLayout>
+
+                <!-- TEXT: 68° -->
+                <TextView
+                    android:id="@+id/68_"
+                    android:text="68°"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+            </LinearLayout>
+
+            <!-- LINE: Line -->
+            <View
+                android:id="@+id/line"
+        android:layout_width="372dp"
+        android:layout_height="0dp" />
+
+            <!-- FRAME: Frame -->
+            <LinearLayout
+                android:id="@+id/frame"
+                android:orientation="horizontal"
+        android:layout_width="372dp"
+        android:layout_height="18dp">
+
+                <!-- TEXT: Sexta -->
+                <TextView
+                    android:id="@+id/sexta"
+                    android:text="Sexta"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="70dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: icon-cloud-sun -->
+                <LinearLayout
+                    android:id="@+id/icon_cloud_sun"
+                    android:orientation="vertical"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                    <!-- FRAME: cloud-sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cloud_sun"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <!-- TEXT: 55° -->
+                <TextView
+                    android:id="@+id/55_"
+                    android:text="55°"
+                    android:textSize="14sp"
+                    android:textColor="#FF94A3B8"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: Frame -->
+                <LinearLayout
+                    android:id="@+id/frame"
+                    android:orientation="horizontal"
+        android:layout_width="176dp"
+        android:layout_height="4dp"
+                    android:background="@drawable/bg_rounded">
+
+                    <!-- RECTANGLE: Rectangle -->
+                    <LinearLayout
+                        android:id="@+id/rectangle"
+        android:layout_width="50dp"
+        android:layout_height="4dp"
+                        android:background="#FFE2E8F0" />
+                </LinearLayout>
+
+                <!-- TEXT: 65° -->
+                <TextView
+                    android:id="@+id/65_"
+                    android:text="65°"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+            </LinearLayout>
+
+            <!-- LINE: Line -->
+            <View
+                android:id="@+id/line"
+        android:layout_width="372dp"
+        android:layout_height="0dp" />
+
+            <!-- FRAME: Frame -->
+            <LinearLayout
+                android:id="@+id/frame"
+                android:orientation="horizontal"
+        android:layout_width="372dp"
+        android:layout_height="18dp">
+
+                <!-- TEXT: Sábado -->
+                <TextView
+                    android:id="@+id/s_bado"
+                    android:text="Sábado"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="70dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: icon-sun -->
+                <LinearLayout
+                    android:id="@+id/icon_sun"
+                    android:orientation="vertical"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                    <!-- FRAME: sun -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/sun"
+        android:layout_width="18dp"
+        android:layout_height="18dp">
+
+                        <!-- VECTOR: Vector -->
+                        <ImageView
+                            android:id="@+id/vector"
+                            android:src="@drawable/ic_vector"
+                            android:scaleType="fitXY"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <!-- TEXT: 57° -->
+                <TextView
+                    android:id="@+id/57_"
+                    android:text="57°"
+                    android:textSize="14sp"
+                    android:textColor="#FF94A3B8"
+                    android:gravity="start"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+
+                <!-- FRAME: Frame -->
+                <LinearLayout
+                    android:id="@+id/frame"
+                    android:orientation="horizontal"
+        android:layout_width="176dp"
+        android:layout_height="4dp"
+                    android:background="@drawable/bg_rounded">
+
+                    <!-- RECTANGLE: Rectangle -->
+                    <LinearLayout
+                        android:id="@+id/rectangle"
+        android:layout_width="60dp"
+        android:layout_height="4dp"
+                        android:background="#FFFFD700" />
+                </LinearLayout>
+
+                <!-- TEXT: 70° -->
+                <TextView
+                    android:id="@+id/70_"
+                    android:text="70°"
+                    android:textSize="14sp"
+                    android:textColor="#FFFFFFFF"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:fontFamily="Geist"
+        android:layout_width="30dp"
+        android:layout_height="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

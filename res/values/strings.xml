@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="time">9:30</string>
+    <string name="location_city">Olimpía</string>
+    <string name="current_temp">30°</string>
+    <string name="sensa__o_de_68_">Sensação de 68°</string>
+    <string name="h__74__l__61_">H: 74°  L: 61°</string>
+    <string name="high_low_range">H: 68°   L: 52°</string>
+    <string name="card_header">temperatura durante o dia</string>
+    <string name="time_label">2 PM</string>
+    <string name="temp_value">30°</string>
+    <string name="quarta">Quarta</string>
+    <string name="30_">30°</string>
+    <string name="74_">74°</string>
+    <string name="quinta">Quinta</string>
+    <string name="58_">58°</string>
+    <string name="68_">68°</string>
+    <string name="sexta">Sexta</string>
+    <string name="55_">55°</string>
+    <string name="65_">65°</string>
+    <string name="s_bado">Sábado</string>
+    <string name="57_">57°</string>
+    <string name="70_">70°</string>
+</resources>
